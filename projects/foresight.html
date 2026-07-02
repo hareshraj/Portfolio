@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foresight — Haresh Raj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">HARESH<span>.</span></a>
+    <button class="nav-toggle mono" aria-label="Toggle menu">MENU</button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#stack">Stack</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a class="btn-sm" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="proj-hero panel-pink">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+    <p class="proj-meta-label mono">BUILD 04 — JUNE 2026</p>
+    <h1 class="proj-title">Foresight</h1>
+    <p class="proj-tagline">Scoring healthcare access risk across all 774 local government areas in Nigeria, and pricing out what waiting actually costs.</p>
+    <div class="proj-meta-row"><span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">scikit-learn</span><span class="chip">GeoPandas</span><span class="chip">Streamlit</span></div>
+    <div class="proj-links"><a class="btn on-dark" href="https://foresight-usaii.streamlit.app/" target="_blank" rel="noopener">Live demo</a><a class="btn" style="background:var(--paper);" href="https://github.com/hareshraj/Foresight-Cost-of-Doing-Nothing" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shot-frame reveal">
+    <img src="../assets/screenshots/foresight.png" alt="Foresight screenshot"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="shot-placeholder">
+      <p>Drop a screenshot here:<br><code>assets/screenshots/foresight.png</code></p>
+    </div>
+  </div>
+</div>
+
+<section class="panel-paper proj-content reveal">
+  <div class="wrap">
+    <p class="proj-section-label">Overview</p>
+    <div class="proj-body">
+      <p>State health offices in Nigeria often lack a clear view of where healthcare access gaps are most severe. Records are frequently scattered or paper-based, making it difficult to identify which areas have little to no functioning clinic access.</p><p>Foresight combines four public datasets, DHS survey data, HDX boundary files, GRID3 facility locations, and WorldPop population rasters, to score healthcare access risk across all 774 local government areas in Nigeria. For any given region, it projects the cost of delaying intervention by one, three, or five years, in terms of preventable deaths and money.</p><p>Every estimate is reported as a range rather than a single number. The model runs a Monte Carlo simulation across thousands of trials to produce low, middle, and high estimates, and regions where the model has low confidence are flagged for human review rather than scored outright.</p>
+    </div>
+    <p class="proj-section-label">Built with</p>
+    <div class="card-tags"><span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">scikit-learn</span><span class="chip">GeoPandas</span><span class="chip">folium</span><span class="chip">Streamlit</span></div>
+
+    <div class="proj-nav">
+      <a href="frac-hit-mitigation.html">&larr; Frac Hit Mitigation</a>
+      <a href="signal-watch.html">Signal Watch &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="panel-ink zig-top">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="footer-title">Let's talk!</h2>
+    <div class="footer-links">
+      <a class="btn on-dark" href="mailto:hareshrajap.22@gmail.com">Email me</a>
+      <a class="btn on-dark" href="https://linkedin.com/in/haresh-raj-2aa63824a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn on-dark" href="https://github.com/hareshraj" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn on-dark" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+    <p class="footer-bottom">Updated July 2026</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Watch — Haresh Raj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">HARESH<span>.</span></a>
+    <button class="nav-toggle mono" aria-label="Toggle menu">MENU</button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#stack">Stack</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a class="btn-sm" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="proj-hero panel-cyan">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+    <p class="proj-meta-label mono">BUILD 05 — JUNE 2026</p>
+    <h1 class="proj-title">Signal Watch</h1>
+    <p class="proj-tagline">An early-warning tool for drug safety, built to surface signals in FDA adverse-event data that simple counts would miss.</p>
+    <div class="proj-meta-row"><span class="chip">Python</span><span class="chip">Aurora PostgreSQL</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">AWS</span><span class="chip">Vercel</span></div>
+    <div class="proj-links"><a class="btn on-dark" href="https://signal-bench-zeta.vercel.app/" target="_blank" rel="noopener">Live demo</a><a class="btn" style="background:var(--paper);" href="https://github.com/hareshraj" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shot-frame reveal">
+    <img src="../assets/screenshots/signal-watch.png" alt="Signal Watch screenshot"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="shot-placeholder">
+      <p>Drop a screenshot here:<br><code>assets/screenshots/signal-watch.png</code></p>
+    </div>
+  </div>
+</div>
+
+<section class="panel-paper proj-content reveal">
+  <div class="wrap">
+    <p class="proj-section-label">Overview</p>
+    <div class="proj-body">
+      <p>Every drug on the market can cause harms that clinical trials never caught. The FDA collects these as adverse-event reports in FAERS, a public database with over 20 million entries, but popular drugs accumulate large report counts simply because more people take them. Raw report counts alone are not a reliable signal.</p><p>Signal Watch computes the same disproportionality statistics used by pharmacovigilance teams to address this problem: PRR, ROR, and IC025, calculated across roughly 40,000 drug and reaction pairs pulled from the openFDA FAERS API. An analyst can triage each flagged pair, inspect the contingency table, track the quarterly reporting trend, and leave notes, all inside a full-stack workbench built on Aurora PostgreSQL and Next.js.</p><p>To keep signals reliable, the pipeline applies a term stoplist, minimum-count thresholds, and requires agreement across all three statistical methods before flagging a pair as confirmed. As a validation check, it also recovers several well-established drug warnings directly from the raw data.</p>
+    </div>
+    <p class="proj-section-label">Built with</p>
+    <div class="card-tags"><span class="chip">Python</span><span class="chip">Aurora PostgreSQL</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">AWS IAM/OIDC</span><span class="chip">Vercel</span></div>
+
+    <div class="proj-nav">
+      <a href="foresight.html">&larr; Foresight</a>
+      <a href="procrastinate.html">ProcrastiNATE! &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="panel-ink zig-top">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="footer-title">Let's talk!</h2>
+    <div class="footer-links">
+      <a class="btn on-dark" href="mailto:hareshrajap.22@gmail.com">Email me</a>
+      <a class="btn on-dark" href="https://linkedin.com/in/haresh-raj-2aa63824a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn on-dark" href="https://github.com/hareshraj" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn on-dark" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+    <p class="footer-bottom">Updated July 2026</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

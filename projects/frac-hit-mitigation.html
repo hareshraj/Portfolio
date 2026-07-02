@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frac Hit Mitigation — Haresh Raj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">HARESH<span>.</span></a>
+    <button class="nav-toggle mono" aria-label="Toggle menu">MENU</button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#stack">Stack</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a class="btn-sm" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="proj-hero panel-orange">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+    <p class="proj-meta-label mono">BUILD 03 — JAN – MAY 2025</p>
+    <h1 class="proj-title">Frac Hit Mitigation</h1>
+    <p class="proj-tagline">An ML pipeline that detects frac hits between neighboring oil wells in real time, reaching over 90% classification accuracy.</p>
+    <div class="proj-meta-row"><span class="chip">Python</span><span class="chip">HMM</span><span class="chip">XGBoost</span><span class="chip">Flask</span><span class="chip">React</span></div>
+    <div class="proj-links"><a class="btn" style="background:var(--paper);" href="https://github.com/hareshraj" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shot-frame reveal">
+    <img src="../assets/screenshots/frac-hit-mitigation.png" alt="Frac Hit Mitigation screenshot"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="shot-placeholder">
+      <p>Drop a screenshot here:<br><code>assets/screenshots/frac-hit-mitigation.png</code></p>
+    </div>
+  </div>
+</div>
+
+<section class="panel-paper proj-content reveal">
+  <div class="wrap">
+    <p class="proj-section-label">Overview</p>
+    <div class="proj-body">
+      <p>A frac hit occurs when hydraulic fracturing at one well disrupts a neighboring well, an event that matters for both safety and cost. This project combines Hidden Markov Models with XGBoost to detect and classify frac hits from time-series sensor data, reaching over 90% classification accuracy.</p><p>The pipeline is deployed as a full-stack system, with a Flask API serving predictions and a React dashboard for real-time visualization and monitoring.</p>
+    </div>
+    <p class="proj-section-label">Built with</p>
+    <div class="card-tags"><span class="chip">Python</span><span class="chip">Hidden Markov Models</span><span class="chip">XGBoost</span><span class="chip">Flask</span><span class="chip">React</span><span class="chip">Vercel</span></div>
+
+    <div class="proj-nav">
+      <a href="panda-express-pos.html">&larr; Panda Express POS</a>
+      <a href="foresight.html">Foresight &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="panel-ink zig-top">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="footer-title">Let's talk!</h2>
+    <div class="footer-links">
+      <a class="btn on-dark" href="mailto:hareshrajap.22@gmail.com">Email me</a>
+      <a class="btn on-dark" href="https://linkedin.com/in/haresh-raj-2aa63824a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn on-dark" href="https://github.com/hareshraj" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn on-dark" href="../assets/Haresh_Raj_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+    <p class="footer-bottom">Updated July 2026</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>
