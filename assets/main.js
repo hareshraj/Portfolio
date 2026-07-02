@@ -1,3 +1,46 @@
+// Clean-URL section routing (works together with vercel.json rewrites:
+// /about, /projects, /stack, /contact all serve index.html; this script
+// scrolls to the right section and keeps the URL clean when navigating)
+const sectionRoutes = { '/about': 'about', '/projects': 'projects', '/stack': 'stack', '/contact': 'contact' };
+
+function scrollToRoute(path) {
+  if (path === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+  const id = sectionRoutes[path];
+  const el = id && document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Only run on index.html (where these section ids actually exist)
+if (document.getElementById('about')) {
+  // Land on the right section immediately if loaded via a clean URL
+  const initialPath = window.location.pathname;
+  if (sectionRoutes[initialPath]) {
+    window.addEventListener('load', () => {
+      const el = document.getElementById(sectionRoutes[initialPath]);
+      if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' });
+    });
+  }
+
+  // Intercept same-page nav clicks so the URL updates without a full reload
+  document.querySelectorAll('a[href^="/"]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '/' || sectionRoutes[href]) {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.pushState(null, '', href);
+        scrollToRoute(href);
+      });
+    }
+  });
+
+  window.addEventListener('popstate', () => {
+    scrollToRoute(window.location.pathname);
+  });
+}
+
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');

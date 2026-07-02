@@ -1,9 +1,3 @@
-/* ============================================
-   Haresh Raj — Portfolio
-   Design system: bold color-blocked panels,
-   halftone texture, jagged panel seams, sticker tags.
-   ============================================ */
-
 :root{
   --ink: #101014;
   --paper: #F2F1EA;
@@ -12,7 +6,6 @@
   --cyan: #00C2D1;
   --line: rgba(16,16,20,0.14);
 
-  /* color roles: cyan primary, pink secondary, orange used sparingly as a third accent */
   --primary: var(--cyan);
   --secondary: var(--pink);
   --tertiary: var(--orange);
@@ -184,7 +177,6 @@ section{ position: relative; padding: 76px 0 70px; }
 .panel-orange{ background: var(--orange); color: var(--ink); }
 .panel-paper{ background: var(--paper); color: var(--ink); }
 
-/* jagged seam biting into the section above */
 .zig-top{
   margin-top: -22px;
   clip-path: polygon(
@@ -217,9 +209,6 @@ section{ position: relative; padding: 76px 0 70px; }
 }
 
 /* ---------- reveal ---------- */
-/* Visible by default. JS adds .pre on load (hides, ready to animate),
-   then .in on scroll-into-view. If JS fails to load, content just
-   stays visible with no animation, instead of staying hidden forever. */
 .reveal.pre{ opacity: 0; transform: translateY(16px); }
 .reveal.pre.in{ opacity: 1; transform: none; }
 .reveal{ transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -398,7 +387,7 @@ footer.panel-ink{ padding-bottom: 50px; }
   border-radius: 4px;
   background: #FBFAF6;
   box-shadow: 6px 6px 0 var(--ink);
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   overflow: hidden;
   margin: -66px 0 0;
 }
