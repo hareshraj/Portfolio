@@ -1,9 +1,13 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     { "source": "/about", "destination": "/index.html" },
     { "source": "/projects", "destination": "/index.html" },
     { "source": "/stack", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/index.html" }
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/projects/signal-watch", "destination": "/projects/signal-watch.html" },
+    { "source": "/projects/foresight", "destination": "/projects/foresight.html" },
+    { "source": "/projects/frac-hit-mitigation", "destination": "/projects/frac-hit-mitigation.html" },
+    { "source": "/projects/panda-express-pos", "destination": "/projects/panda-express-pos.html" },
+    { "source": "/projects/procrastinate", "destination": "/projects/procrastinate.html" }
   ]
 }
